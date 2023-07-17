@@ -4,6 +4,8 @@ SAFS is a framework for designing novel activation functions for arbitrary spars
 
 SAFS  is written in Python3 and tested with Python 3.10. 
 
+To access the official repository of the project: https://github.com/automl/SAFS
+
 
 ## Installation
 
@@ -30,21 +32,21 @@ We will use `main.py` for all our experiments on the MNIST and CIFAR-10 and Imag
 - `--set_device`: select a gpu(0, 1, 2, ...)
 
 
-### Runing a simple example
+### Running a simple example
 
-First, we train VGG-16 networks `--first_train=1` then pruned the model  with `pruning_rate = 0.99`. Then, retrain the pruned model `--Train_after_prune=1` after that we desing new activation functions for each layer of the network using the LAHC algorithm `--first_stage=1`. Finaly we run the Second stage HPO `--Second_stage=1`.  
+First, we train VGG-16 networks `--first_train=1` and then pruned the model  with `pruning_rate = 0.99`. Then, retrain the pruned model `--Train_after_prune=1` after that we design new activation functions for each layer of the network using the LAHC algorithm `--first_stage=1`. Finally, we run the Second stage HPO `--Second_stage=1`.  
 
 `python main.py --model_arch=2 --runing_mode="metafire" --pruning_rate=0.99 --first_train=1  --Train_after_prune=1 --first_stage=1 --Second_stage=1`
 
 
 
-### Summery of results
+### Summary of results
 ![alt text](./docs/images/results_table.png?raw=true)
 
 
 ## Contacting us
 
-If you have trouble using SAFS, a concrete question or found a bug, please create an [issue](https://github.com/Mohammadloni/SAFS/issues). This is the easiest way to communicate about these things with us. 
+If you have trouble using SAFS, have a concrete question, or found a bug, please create an [issue](https://github.com/Mohammadloni/SAFS/issues). This is the easiest way to communicate about these things with us. 
 
 For all other inquiries, please write an email to mohammad.loni@mdu.se.
 
